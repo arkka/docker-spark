@@ -67,11 +67,11 @@ RUN curl -sL --retry 3 \
 
 # SPARK ADDITIONAL JARS FOR AWS
 RUN curl -sL -O --retry 3 \
-  "http://search.maven.org/remotecontent?filepath=com/amazonaws/aws-java-sdk/1.7.4/aws-java-sdk-1.7.4.jar" \
-  | > $SPARK_HOME/jars/aws-java-sdk-1.7.4.jar \
+  "http://search.maven.org/remotecontent?filepath=com/amazonaws/aws-java-sdk/1.11.119/aws-java-sdk-1.11.119.jar" \
+  | > $SPARK_HOME/jars/aws-java-sdk-1.11.119.jar \
  && curl -sL -O --retry 3 \
-  "http://search.maven.org/remotecontent?filepath=org/apache/hadoop/hadoop-aws/2.7.1/hadoop-aws-2.7.1.jar" \
-  | > $SPARK_HOME/jars/hadoop-aws-2.7.1.jar
+  "http://search.maven.org/remotecontent?filepath=org/apache/hadoop/hadoop-aws/2.7.3/hadoop-aws-2.7.3.jar" \
+  | > $SPARK_HOME/jars/hadoop-aws-2.7.3.jar
 
 WORKDIR $SPARK_HOME
 CMD ["bin/spark-class", "org.apache.spark.deploy.master.Master"]
