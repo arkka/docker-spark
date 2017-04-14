@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Getty Images "https://github.com/gettyimages"
+MAINTAINER Arkka Dhiratara "https://github.com/arkka"
 
 RUN apt-get update \
  && apt-get install -y locales \
@@ -18,7 +18,7 @@ ENV LC_ALL en_US.UTF-8
 
 RUN apt-get update \
  && apt-get install -y curl unzip \
-    python3 python3-setuptools \
+    python3.6 python3-setuptools \
  && ln -s /usr/bin/python3 /usr/bin/python \
  && easy_install3 pip py4j \
  && apt-get clean \
