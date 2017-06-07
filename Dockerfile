@@ -75,3 +75,6 @@ RUN curl -sL -O --retry 3 \
 
 WORKDIR $SPARK_HOME
 CMD ["bin/spark-class", "org.apache.spark.deploy.master.Master"]
+
+# Python Package
+RUN pip2 --no-cache-dir install elasticsearch unidecode nltk Sastrawi
