@@ -77,7 +77,7 @@ RUN curl -sL -O --retry 3 \
 # Python Package
 RUN curl -sL -O --retry 3 "https://bootstrap.pypa.io/get-pip.py" \
   && python2.7 get-pip.py  \
-  && pip2.7 --no-cache-dir install elasticsearch unidecode nltk Sastrawi
+  && pip2.7 --no-cache-dir install pytz sklearn elasticsearch unidecode nltk Sastrawi
 
 WORKDIR $SPARK_HOME
 CMD ["bin/spark-class", "org.apache.spark.deploy.master.Master"]
